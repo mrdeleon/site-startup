@@ -1,3 +1,374 @@
-@import "normalize.css";
-@import "breakpoints.css";
-@import "styles.css";
+/*==========================
+Site Name: 
+Author: Michael De Leon
+
+1. CSS RESET
+2. DEFAULT STYLES
+3. HELPER STYLES
+4. HEADER
+5. NAVIGATION
+6. MAIN CONTENT
+7. FOOTER
+8. CSS3 ANIMATIONS
+9. PLUGINS
+10.PRINT STYLES
+
+/*==========================
+1.      CSS RESET
+==========================*/
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+html {
+  overflow-y: scroll;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+}
+img {
+  display: block;
+  border: 0px;
+}
+ol,
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1em;
+}
+label,
+input[type=button],
+input[type=submit],
+input[type="image"],
+button {
+  border: none;
+  cursor: pointer;
+}
+a:hover,
+a:active,
+object,
+button,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+input,
+select {
+  vertical-align: middle;
+}
+textarea {
+  font-family: sans-serif;
+}
+button {
+  overflow: visible;
+  vertical-align: top;
+  width: auto;
+}
+th,
+td,
+li,
+img {
+  text-align: left;
+  vertical-align: top;
+}
+/*==========================
+2.		DEFAULT STYLES
+==========================*/
+body {
+  background: #FFF;
+  color: #333333;
+  font-family: sans-serif;
+  font-size: 13px;
+}
+a {
+  color: #00e;
+}
+a:visited {
+  color: #551a8b;
+}
+a:hover {
+  color: #06e;
+}
+a:focus {
+  outline: thin dotted;
+}
+p {
+  margin: 5px 0px 10px 0px;
+  line-height: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  color: #000;
+  display: block;
+  font-size: 12px;
+}
+h1 {
+  color: #1A75CF;
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+h1 span {
+  font-size: 15px;
+}
+h2 {
+  color: #666666;
+  font-size: 18px;
+}
+h2 span {
+  font-size: 15px;
+}
+h3 {
+  color: #333333;
+  font-size: 14px;
+}
+h4 {
+  color: #333333;
+  font-size: 12px;
+}
+h5 {
+  color: #333333;
+  font-size: 12px;
+}
+h6 {
+  color: #0769cd;
+  font-size: 12px;
+}
+/* FORMS */
+input[type=text],
+input[type=password],
+textarea {
+  border: 1px solid #9c9c9c;
+  padding: 3px 5px;
+  min-width: 200px;
+}
+select {
+  border: 1px solid #9c9c9c;
+  width: 200px;
+}
+input.error,
+textarea.error,
+select.error {
+  background-color: #ffdede;
+  border-color: #cf0000;
+}
+label {
+  color: #999999;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  vertical-align: top;
+}
+label span {
+  color: #4e8abe;
+  vertical-align: top;
+}
+input:invalid,
+textarea:invalid {
+  background-color: #f0dddd;
+}
+/*==========================
+3.	 HELPER STYLES
+==========================*/
+.test-border {
+  border: 1px solid red !important;
+}
+.ir {
+  background-repeat: no-repeat;
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-indent: -999em;
+  text-align: left;
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+.visuallyhidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.invisible {
+  visibility: hidden;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+.clear {
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.bullet-list {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.bullet-list li {
+  list-style-type: disc;
+  margin-bottom: 2px;
+}
+.d-block,
+.show {
+  display: block;
+}
+.d-none,
+.hide {
+  display: none;
+}
+.img-border {
+  border: 1px solid #CCCCCC;
+}
+.error {
+  color: #FF0000;
+}
+.img-left {
+  float: left;
+  margin: 0px 10px 10px 0px;
+}
+.img-right {
+  float: right;
+  margin: 0px 0px 10px 10px;
+}
+.img-center,
+.center {
+  margin: 0px auto;
+}
+.ta-left {
+  text-align: left;
+}
+.ta-right {
+  text-align: right;
+}
+.ta-center {
+  text-align: center;
+}
+.ta-justify {
+  text-align: justify;
+}
+/*==========================
+4.   HEADER
+==========================*/
+/*==========================
+5.   NAVIGATION
+==========================*/
+/*==========================
+6.   MAIN CONTENT
+==========================*/
+/*==========================
+7.   FOOTER
+==========================*/
+footer[role="footer"] {
+  color: #666;
+  clear: both;
+  font-size: 10px;
+  margin-top: 10px;
+}
+/*==========================
+8.   CSS 3 ANIMATIONS
+==========================*/
+/*==========================
+9.   PLUGINS
+==========================*/
+/*==========================
+10.   PRINT STYLES
+==========================*/
+/**
+* Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+* http://html5boilerplate.com/
+*/
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links for images, or javascript/internal links
+     */
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
