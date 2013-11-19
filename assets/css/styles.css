@@ -2,22 +2,18 @@
 Site Name: 
 Author: Michael De Leon
 
-
 1. CSS RESET
 2. DEFAULT STYLES
 3. HELPER STYLES
 4. HEADER
-5. MAIN NAVIGATION
-6. BREAD CRUMB
-7. MAIN CONTENT
-8. FOOTER
-9. CSS3 ANIMATIONS
-10.PLUGINS
-11.PRINT STYLES
+5. NAVIGATION
+6. MAIN CONTENT
+7. FOOTER
+8. CSS3 ANIMATIONS
+9. PLUGINS
+10.PRINT STYLES
 
 ==========================*/
-
-
 
 /*==========================
 1.      CSS RESET
@@ -37,7 +33,6 @@ button{overflow:visible;vertical-align:top;width:auto;}
 th,td,li,img{text-align:left;vertical-align:top;}
 
 /*==========================*/
-
 
 /*==========================
 2.		DEFAULT STYLES
@@ -128,16 +123,12 @@ nav[role="navigation"]{
 	
 }
 
-/*==========================
-6.   BREAD CRUMB
-==========================*/
-
-#breadCrumb{
+#bread-crumb{
 	
 }
 
 /*==========================
-7.   MAIN CONTENT
+6.   MAIN CONTENT
 ==========================*/
 
 main[role="main"]{
@@ -145,7 +136,7 @@ main[role="main"]{
 }
 
 /*==========================
-8.   FOOTER
+7.   FOOTER
 ==========================*/
 
 footer[role="footer"]{
@@ -154,21 +145,17 @@ footer[role="footer"]{
     font-size:10px;
     margin-top:10px;
 }
-       
+
 /*==========================
-9.	 COLUMNS
+8.   CSS 3 ANIMATIONS
 ==========================*/
 
 /*==========================
-11.   CSS 3 ANIMATIONS
+9.   PLUGINS
 ==========================*/
 
 /*==========================
-12.   PLUGINS
-==========================*/
-
-/*==========================
-13.   PRINT STYLES
+10.   PRINT STYLES
 ==========================*/
 /**
 * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
