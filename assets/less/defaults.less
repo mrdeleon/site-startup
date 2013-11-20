@@ -1,6 +1,6 @@
-@color-main: #3d3d3d;
-@color-sec: #3d3d3d;
-@color-tri: #3d3d3d;
+@color-main : #3d3d3d;
+@color-sec : #3d3d3d;
+@color-tri : #3d3d3d;
 
 @heading-1 : 3em;
 @heading-2 : 2.6em;
@@ -8,9 +8,30 @@
 @heading-4 : 2em;
 @heading-5 : 1.7em;
 @heading-6 : 1.4em;
+@sub-heading : 0.857em; //12px
 
 
 
-.content-padding (@padding :12px){
-	padding:@padding;
+.padding-all (@l : 12px;@r : 12px;@b : 12px;@t : 12px){
+	padding:@t @r @b @l;
+}
+.padding-lr (@l : 12px;@r : 12px){
+	padding-left:@l;
+	padding-right:@r;
+}
+.padding-tb (@t : 12px;@b : 12px){
+	padding-top:@t;
+	padding-bottom:@b;
+}
+.margin-lr (@l : 12px; @r : 12px){
+	margin-left:@l;
+	margin-right:@r;
+}
+
+
+.clearfix() {
+  zoom: 1;
+  &:before,
+  &:after { content:"\0020";display:block;height:0;visibility:hidden; }
+  &:after { clear:both;}
 }

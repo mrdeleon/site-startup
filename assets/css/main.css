@@ -17,6 +17,7 @@ Author: Michael De Leon
 1.      CSS RESET
 ==========================*/
 * {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
@@ -88,9 +89,9 @@ img {
 ==========================*/
 body {
   background: #FFF;
-  color: #333333;
+  color: #3d3d3d;
   font-family: sans-serif;
-  font-size: 13px;
+  font-size: 14px;
 }
 a {
   color: #00e;
@@ -101,8 +102,17 @@ a:visited {
 a:hover {
   color: #06e;
 }
+a:active {
+  color: #ddd;
+}
 a:focus {
   outline: thin dotted;
+}
+p:first-child {
+  margin-top: 0px;
+}
+p:only-child {
+  margin: 0px;
 }
 p {
   margin: 5px 0px 10px 0px;
@@ -126,10 +136,11 @@ h6 span {
   color: #000;
   display: block;
   font-size: 12px;
+  line-height: 1em;
 }
 h1 {
   color: #1A75CF;
-  font-size: 21px;
+  font-size: 3em;
   margin-bottom: 10px;
 }
 h1 span {
@@ -137,26 +148,26 @@ h1 span {
 }
 h2 {
   color: #666666;
-  font-size: 18px;
+  font-size: 2.6em;
 }
 h2 span {
   font-size: 15px;
 }
 h3 {
   color: #333333;
-  font-size: 14px;
+  font-size: 2.3em;
 }
 h4 {
   color: #333333;
-  font-size: 12px;
+  font-size: 2em;
 }
 h5 {
   color: #333333;
-  font-size: 12px;
+  font-size: 1.7em;
 }
 h6 {
   color: #0769cd;
-  font-size: 12px;
+  font-size: 1.4em;
 }
 /* FORMS */
 input[type=text],
@@ -192,6 +203,26 @@ input:invalid,
 textarea:invalid {
   background-color: #f0dddd;
 }
+.wrapper {
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .wrapper {
+    min-width: 320px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  .wrapper {
+    max-width: 720px;
+  }
+}
+@media only screen and (min-width: 960px) and (max-width: 1224px) {
+  .wrapper {
+    max-width: 960px;
+  }
+}
 /*==========================
 3.	 HELPER STYLES
 ==========================*/
@@ -218,19 +249,6 @@ textarea:invalid {
 .invisible {
   visibility: hidden;
 }
-.clearfix:before,
-.clearfix:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  visibility: hidden;
-}
-.clearfix:after {
-  clear: both;
-}
-.clearfix {
-  zoom: 1;
-}
 .clear {
   clear: both;
 }
@@ -248,11 +266,9 @@ textarea:invalid {
   list-style-type: disc;
   margin-bottom: 2px;
 }
-.d-block,
 .show {
   display: block;
 }
-.d-none,
 .hide {
   display: none;
 }
@@ -289,12 +305,37 @@ textarea:invalid {
 /*==========================
 4.   HEADER
 ==========================*/
+header[role="banner"] .wrapper {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
 /*==========================
 5.   NAVIGATION
 ==========================*/
+#nav-main {
+  -ms-transform: rotate(5deg) skew(15deg) translate(12px, 40px);
+  /* IE 9 */
+  -webkit-transform: rotate(5deg) skew(15deg) translate(12px, 40px);
+  /* Safari and Chrome */
+  transform: rotate(5deg) skew(15deg) translate(12px, 40px);
+}
+#nav-main li {
+  display: inline-block;
+  -ms-transform: rotate3d(10px, 10px, 10px, 30deg);
+  /* IE 9 */
+  -webkit-transform: rotate3d(10px, 10px, 10px, 30deg);
+  /* Safari and Chrome */
+  transform: rotate3d(10px, 10px, 10px, 30deg);
+}
+#nav-main li.active a {
+  color: red;
+}
 /*==========================
 6.   MAIN CONTENT
 ==========================*/
+main[role="main"] .wrapper {
+  min-height: 150px;
+}
 /*==========================
 7.   FOOTER
 ==========================*/
@@ -302,7 +343,10 @@ footer[role="footer"] {
   color: #666;
   clear: both;
   font-size: 10px;
-  margin-top: 10px;
+}
+footer[role="footer"] .wrapper {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 /*==========================
 8.   CSS 3 ANIMATIONS
