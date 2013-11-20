@@ -1,0 +1,82 @@
+.border-radius (@radius : 12px) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.border-image (@source; @slice; @width : 1; @outset : 0; @repeat : repeat;){
+	border-image:url(@source) @slice @width @outset @repeat;
+	-webkit-border-image:url(@source) @slice @width @outset @repeat; /* Safari 5 and older */
+	-o-border-image:url(@source) @slice @width @outset @repeat; /* Opera */
+}
+
+.gradient (@center : 0% 0%; @shape-size : closest-side; @start; @last){
+	background: -webkit-linear-gradient(@center, @shape-size, @start, @last); /* For Safari */
+	background: -o-linear-gradient(@center, @shape-size, @start, @last); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(@center, @shape-size, @start, @last); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(@center, @shape-size, @start, @last); /* Standard syntax */
+}
+
+.gradient-repeat (@center : 0% 0%; @shape-size : closest-side; @start; @last){
+	background: -webkit-repeating-linear-gradient(@center, @shape-size, @start, @last);/* Safari */
+	background: -o-repeating-linear-gradient(@center, @shape-size, @start, @last);/* Opera 11.1 to 12.0 */
+	background: -moz-repeating-linear-gradient(@center, @shape-size, @start, @last);/* Firefox 3.6 to 15 */
+	background: repeating-linear-gradient(@center, @shape-size, @start, @last);/* Standard syntax */
+}
+
+.gradient-radial (@center : 0% 0%; @shape-size : closest-side; @start; @last){
+	background: -webkit-radial-gradient(@center, @shape-size, @start, @last); /* Safari */
+	background: -o-radial-gradient(@center, @shape-size, @start, @last); /* For Opera 11.1 to 12.0 */
+	background: -moz-radial-gradient(@center, @shape-size, @start, @last); /* For Firefox 3.6 to 15 */
+	background: radial-gradient(@center, @shape-size, @start, @last); /* Standard syntax */
+}
+
+.gradient-repeat-radial (@center : 0% 0%; @shape-size : closest-side; @start; @last){
+	background: -webkit-repeating-radial-gradient(@center, @shape-size, @start, @last); /* Safari */
+	background: -o-radial-repeating-gradient(@center, @shape-size, @start, @last); /* For Opera 11.1 to 12.0 */
+	background: -moz-radial-repeating-gradient(@center, @shape-size, @start, @last); /* For Firefox 3.6 to 15 */
+	background: radial-repeating-gradient(@center, @shape-size, @start, @last); /* Standard syntax */
+}
+
+.transform-origin(@x; @y){
+	-ms-transform-origin:@x @y; /* IE 9 */
+	-webkit-transform-origin:@x @y; /* Safari and Chrome */
+	transform-origin:@x @y;
+}
+
+.rotate (@rotate : 15deg){
+	-ms-transform: rotate(@rotate); /* IE 9 */
+	-webkit-transform: rotate(@rotate); /* Safari and Chrome */
+	transform: rotate(@rotate);
+}
+
+.translate (@x; @y){
+	transform: translate(@x,@y);
+	-ms-transform: translate(@x,@y); /* IE 9 */
+	-webkit-transform: translate(@x,@y); /* Safari and Chrome */
+}
+
+.scale (@x; @y){
+	-ms-transform: scale(@x,@y); /* IE 9 */
+	-webkit-transform: scale(@x,@y); /* Safari and Chrome */
+	transform: scale(@x,@y);
+}
+
+.skew (@x; @y){
+	-ms-transform: skew(@x, @y); /* IE 9 */
+	-webkit-transform: skew(@x, @y); /* Safari and Chrome */
+	transform: skew(@x, @y);
+}
+
+.matrix (@rotateX; @rotateY; @scaleX; @scaleY; @moveX; @moveY) {
+	-ms-transform:matrix(@rotateX; @rotateY; @scaleX; @scaleY; @moveX; @moveY); /* IE 9 */
+	-webkit-transform:matrix(@rotateX; @rotateY; @scaleX; @scaleY; @moveX; @moveY); /* Safari and Chrome */
+	transform:matrix(@rotateX; @rotateY; @scaleX; @scaleY; @moveX; @moveY);
+}
+
+.wrap () {
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
