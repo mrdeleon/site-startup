@@ -44,10 +44,10 @@ p:first-child{margin-top:0px;}
 p:only-child{margin:0px;}
 p        {margin:5px 0px 10px 0px;line-height:16px;}
 h1,h2,h3,h4,h5,h6{font-weight:normal;margin-bottom:5px;}
-h1 span,h2 span,h3 span,h4 span,h5 span,h6 span {
+h1 small,h2 small,h3 small,h4 small,h5 small,h6 small {
 	color:#000;
 	display:block;
-	font-size:12px;
+	font-size:60%;
 	line-height:1em;
 }
 h1{
@@ -55,17 +55,11 @@ h1{
 	font-size:@heading-1;
 	margin-bottom:10px;
 }
-h1 span  {font-size:15px;}
 h2       {color:#666666; font-size:@heading-2;}
-h2 span  {font-size:15px;}
 h3       {color:#333333; font-size:@heading-3;}
-h3 span  {}
 h4       {color:#333333; font-size:@heading-4;}
-h4 span  {}
 h5       {color:#333333; font-size:@heading-5;}
-h5 span  {}
 h6       {color:#0769cd; font-size:@heading-6;}
-h6 span  {}
 
 /* FORMS */
 form{}
@@ -119,8 +113,6 @@ input:invalid,textarea:invalid{background-color:#f0dddd;}
 .clear			{clear:both;}
 .fl				{float:left;}
 .fr				{float:right;}
-.bullet-list	{margin-left:30px; margin-bottom:10px;}
-.bullet-list li	{list-style-type:disc; margin-bottom:2px;}
 .show			{display:block;}
 .hide			{display:none;}
 .img-border		{border:1px solid #CCCCCC;}
@@ -164,6 +156,10 @@ header[role="banner"] .wrapper{
 
 main[role="main"]{}
 main[role="main"] .wrapper{ min-height:150px;}
+
+.test{
+	.bullet-list;
+}
 
 /*==========================
 7.   FOOTER

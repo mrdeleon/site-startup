@@ -127,15 +127,15 @@ h6 {
   font-weight: normal;
   margin-bottom: 5px;
 }
-h1 span,
-h2 span,
-h3 span,
-h4 span,
-h5 span,
-h6 span {
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
   color: #000;
   display: block;
-  font-size: 12px;
+  font-size: 60%;
   line-height: 1em;
 }
 h1 {
@@ -143,15 +143,9 @@ h1 {
   font-size: 3em;
   margin-bottom: 10px;
 }
-h1 span {
-  font-size: 15px;
-}
 h2 {
   color: #666666;
   font-size: 2.6em;
-}
-h2 span {
-  font-size: 15px;
 }
 h3 {
   color: #333333;
@@ -258,14 +252,6 @@ textarea:invalid {
 .fr {
   float: right;
 }
-.bullet-list {
-  margin-left: 30px;
-  margin-bottom: 10px;
-}
-.bullet-list li {
-  list-style-type: disc;
-  margin-bottom: 2px;
-}
 .show {
   display: block;
 }
@@ -321,11 +307,11 @@ header[role="banner"] .wrapper {
 }
 #nav-main li {
   display: inline-block;
-  -ms-transform: rotate3d(10px, 10px, 10px, 30deg);
+  -ms-transform: rotate3d(10, 10, 10, 30deg);
   /* IE 9 */
-  -webkit-transform: rotate3d(10px, 10px, 10px, 30deg);
+  -webkit-transform: rotate3d(10, 10, 10, 30deg);
   /* Safari and Chrome */
-  transform: rotate3d(10px, 10px, 10px, 30deg);
+  transform: rotate3d(10, 10, 10, 30deg);
 }
 #nav-main li.active a {
   color: red;
@@ -335,6 +321,14 @@ header[role="banner"] .wrapper {
 ==========================*/
 main[role="main"] .wrapper {
   min-height: 150px;
+}
+.test {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.test li {
+  list-style-type: disc;
+  margin-bottom: 2px;
 }
 /*==========================
 7.   FOOTER
@@ -415,4 +409,12 @@ footer[role="footer"] .wrapper {
   h3 {
     page-break-after: avoid;
   }
+}
+.bullet-list {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.bullet-list li {
+  list-style-type: disc;
+  margin-bottom: 2px;
 }

@@ -12,14 +12,14 @@
 
 
 
-.padding-all (@l : 12px;@r : 12px;@b : 12px;@t : 12px){
+.padding-all (@l : 12px; @r : 12px; @b : 12px; @t : 12px){
 	padding:@t @r @b @l;
 }
-.padding-lr (@l : 12px;@r : 12px){
+.padding-lr (@l : 12px; @r : 12px){
 	padding-left:@l;
 	padding-right:@r;
 }
-.padding-tb (@t : 12px;@b : 12px){
+.padding-tb (@t : 12px; @b : 12px){
 	padding-top:@t;
 	padding-bottom:@b;
 }
@@ -28,10 +28,18 @@
 	margin-right:@r;
 }
 
+.bullet-list{
+	margin-left:30px;
+	margin-bottom:10px;
+	
+	li{
+		list-style-type:disc; margin-bottom:2px;
+	}
+}
 
 .clearfix() {
-  zoom: 1;
-  &:before,
-  &:after { content:"\0020";display:block;height:0;visibility:hidden; }
-  &:after { clear:both;}
+	zoom: 1;
+	&:before,
+	&:after { content:"\0020";display:block;height:0;visibility:hidden; }
+	&:after { clear:both;}
 }
